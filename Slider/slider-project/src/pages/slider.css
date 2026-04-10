@@ -1,0 +1,78 @@
+/* Slider wrapper */
+.slider-container {
+ position: relative;
+  width: 1000px;
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.image{
+    width:100%
+}
+/* Overlay container */
+.movie-overlay {
+  position: absolute;
+  bottom: 50px;        
+  left: 80px;
+  color: white;
+  max-width: 600px;
+  padding: 25px 30px;
+  border-radius: 12px;
+ 
+ 
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Title styling */
+.movie-overlay h1 {
+  margin: 0 0 12px 0;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Description styling */
+.movie-overlay p {
+  margin: 6px 0;
+  font-size: 17px;
+  line-height: 1.4;
+  
+}
+
+/* Rating styling */
+.movie-overlay .rating {
+  font-weight: bold;
+  color: #ffd700;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .movie-overlay {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    max-width: 90%;
+    padding: 15px 20px;
+  }
+
+  .movie-overlay h1 {
+    font-size: 28px;
+  }
+
+  .movie-overlay p {
+    font-size: 14px;
+  }
+
+  .movie-overlay .rating {
+    font-size: 16px;
+  }
+}
